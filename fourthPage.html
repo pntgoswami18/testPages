@@ -4,6 +4,22 @@
 <head>
   <script src="https://cdn.optimizely.com/js/17473902683.js"></script>
   <script type="text/javascript" src="//try.abtasty.com/927628ef6beb6f6ef6cd6a1d52b5a70c.js"></script>
+  <script type="text/javascript">
+    document.cookie = "test=12356787";
+    function getCookies() {
+    let pairs = document.cookie.split(/; ?/),
+        cookies = {};
+    for (let i = 0; i < pairs.length; i++) {
+      let pair = pairs[i].split('=');
+      try {
+        cookies[pair[0]] = (pair[1])
+      } catch { }
+    }
+    return cookies;
+}
+
+console.log(getCookies())
+  </script>
 
   <!-- Start VWO Asynchronous Code -->
   <script type='text/javascript'>
